@@ -21,7 +21,7 @@ h1{
 }
 
 h2{
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: .5em;
 }
 
@@ -30,14 +30,19 @@ form{
     display: flex;
 }
 
+/* 
+Not sure if I should use fieldset
 fieldset{
     width: 100%;
-}
+} */
 
 input{
     color: gray;
+    width:  17em;
     height: 1.5em;
     font-size: 1em;
+    margin-right: auto;
+    
     /* margin-left:auto;   */
      /*first input should begin at the same spot as h2 heading. look up flex/flexbox*/
     
@@ -46,9 +51,14 @@ input{
 button{
     background-color: gray;
     color: white;
-    margin: 15px 30px;
+    margin-top: 15px;
     height: 2em;
+    width: 10em;
     float: right; 
+    display: inline;
+    border-radius: 5px;
+    font-size: 1em;
+
   
     /*Float move the button to the right but the table moves up.  */
 
@@ -59,6 +69,7 @@ button{
 
 
 table{
+    margin-top: 1.5em;
     width: 100%;
     table-layout: fixed; /* TODO decide if I should change to auto or leave fixed based on how employee data appears when appended*/
     
@@ -82,3 +93,9 @@ tfoot {
     background-color: lightgray;
 }
   /* TODO- make sure table and button size matches the input size */
+
+  p{
+    margin-top: 1em;
+    float: right;
+    font-size: 1.5em;
+  }
