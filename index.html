@@ -15,20 +15,25 @@
     <main>
         <section>
              <h2>Add Employee</h2> <!--Unsure if I should use labels on inputs. Labels not included in example -->
+
             <form id="inputForm" name="add employee form" action="">
-                <!-- <fieldset> Not sure if I should use fieldset-->
-                <input id="fName" name="first name" value="First Name" type="text">
-                <input id="lName" name="last name" value= "Last Name" type="text">
-                <input id="idNumber" name="id number" value="ID" type="text">
-                <input id="title" name="title" title="Title" value="Title" type="text">
-                <input id="salary" name="salary" value="Annual Salary" type="text">
-                <!-- </fieldset> -->
+                <fieldset> 
+
+                    <input id="fName" name="first name" value="First Name" type="text">
+                    <input id="lName" name="last name" value= "Last Name" type="text">
+                    <input id="idNumber" name="id number" value="ID" type="text">
+                    <input id="title" name="title" title="Title" value="Title" type="text">
+                    <input id="salary" name="salary" value="Annual Salary" type="text">
+
+                    <div id="sumbitBtn">
+
+                        <button  name="subit button">
+                        Submit 
+                        </button> 
+
+                    </div>
+                </fieldset>
             </form>
-            <div id="sumbitBtn">
-                <button  name="subit button">
-                    Submit
-                </button> 
-            </div>
         </section>
 
         <section>
@@ -36,16 +41,18 @@
             <table >
                 <thead>
                 <tr>   <!--what is the difference between doing a colgroup and a table? -->
+
                     <th id="tableFName" >First Name</th>
                     <th id="tableLName" >Last Name</th>
                     <th id="tableIDNumber" >ID</th>
                     <th id="tableTitle" >Title</th>
                     <th id="tableSalary" >Annual Salary</th>
                     <th></th> <!--Unsure if I need to put an empty th to account for employee delete buttons -->
+
                 </tr>
                 </thead>
                 <tbody id="tableData">
-                    
+                    <!-- This is where the employee information will be added by jQuery -->
                 </tbody>
                 <tfoot>
                     <td colspan="6"></td>
