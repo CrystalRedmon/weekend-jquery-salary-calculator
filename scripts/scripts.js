@@ -13,6 +13,7 @@ function onReady(){
     $('button').on('click', onAddEmployee);
 
 
+    $('#tableBody').on('click', '.deleteBtn', onDeleteEmployee);
 
 
 }
@@ -48,14 +49,15 @@ function onAddEmployee(evt){
     ////    
 };
 
-
+//////      RENDER FUNCTIONS         ///////////
 ////////FUNCTION TO APPEND EMPLOYEE INFO TO DOM
 function toRender(){
+
+    ///CLEARS THE TABLE
     $('#tableBody').empty();
 
+    ///FOR EACH EMPLOYY IN EMPLOYEES ARRAY APPEND TR/TD/BUTTON
     for(let employee of employees){
-
-        console.log(employees.firstName);
         $('#tableBody').append(`
         
         <tr>
@@ -65,11 +67,14 @@ function toRender(){
             <td>${employee.title}</td>
             <td>${employee.annualSalary}</td>
             <td>
-                <button>Delete</button>
+                <button class='deleteBtn' >Delete</button>
             </td>
         </tr>
         `);
-    }
+    };
+
+    console.log($('#tableBody'))
+
 
         ///////EMPTY FIELDS AFTER INPUT
         $('#tableBody').append(`
@@ -79,11 +84,18 @@ function toRender(){
                 <td>${$('#lName').val("")}</td>
                 <td>${$('#idNumber').val("")}</td>
                 <td>${$('#title').val("")}</td>
-                <td>${$('#salary').val("")}</td>
-            <td>
-                <button>Delete</button>
-            </td>
+                <td>${$('#salary').val("")}</td>  
+                <td>
+                    <button class='deleteBtn' >Delete</button>
+                </td>
             </tr>
     `);
-
+console.log(employees)
 }
+
+
+function onDeleteEmployee(){
+    console.log('we in here');
+    $(this).parent().parent().remove();
+
+};

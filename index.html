@@ -20,12 +20,20 @@
 
             <form id="inputForm" name="add employee form" action="">
                 <fieldset> 
+                    <label for="fName">First Name</label><br>
+                    <input id="fName" name="first name" type="text">
+                    
+                    <label for="lname">Last Name</label>
+                    <input id="lName" name="last name" type="text">
 
-                    <input id="fName" name="first name" value="First Name" type="text">
-                    <input id="lName" name="last name" value= "Last Name" type="text">
-                    <input id="idNumber" name="id number" value="ID" type="text">
-                    <input id="title" name="title" title="Title" value="Title" type="text">
-                    <input id="salary" name="salary" value="Annual Salary" type="text">
+                    <label for="idNumber">ID Number</label>
+                    <input id="idNumber" name="id number" type="text">
+
+                    <label for="title">Title</label>
+                    <input id="title" name="title" title="Title" type="text">
+
+                    <label for="salary">Submit</label>
+                    <input id="salary" name="salary" type="text">
 
                     <div id="sumbitBtn" >
 
@@ -54,7 +62,9 @@
                 </tr>
                 </thead>
                 <tbody id="tableBody">
+                    <tr >
                     <!-- This is where the employee information will be added by jQuery -->
+                    </tr>
                 </tbody>
                 <tfoot>
                     <td colspan="6"></td>

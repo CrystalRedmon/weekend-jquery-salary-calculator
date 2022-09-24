@@ -39,10 +39,10 @@ fieldset{
 
 input{
     color: gray;
-    width:  17em;
+    width:  10em;
     height: 1.5em;
     font-size: 1em;
-    margin-right: auto;
+    margin-right: 2em;
     
     /* margin-left:auto;   */
      /*first input should begin at the same spot as h2 heading. look up flex/flexbox*/
@@ -87,7 +87,7 @@ thead{
 }
 
 
-table, th, tr, td{
+table, th, td{
     border: 1px solid;
     border-collapse: collapse;
     text-align: left;
