@@ -102,16 +102,14 @@ function toRender(){
 
 
 function toCalulateExpenses(){
-    console.log('yup yup');
 
     ///iterate employees array
     for(let employee of employees){
-        console.log(employee.annualSalary);
-        monthlyExpenses += employee.annualSalary; 
-        
+        monthlyExpenses = monthlyExpenses + Number(employee.annualSalary);    
     }
         
-    $('#monthlyExpenses').text(`$ ${monthlyExpenses}`)
+    $('#monthlyExpenses').text(`$ ${Number(monthlyExpenses)}`)
+
     console.log(Number(monthlyExpenses));
     ///add every annualSalary to monthly expenses
 
