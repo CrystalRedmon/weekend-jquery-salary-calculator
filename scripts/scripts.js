@@ -36,6 +36,8 @@ function onAddEmployee(evt){
     };
 
 
+
+
     //////  ADD NEW EMPLOYEE TO EMPLOYEES ARRAY
     employees.push(newEmployee);
 
@@ -68,4 +70,20 @@ function toRender(){
         </tr>
         `);
     }
+
+        ///////EMPTY FIELDS AFTER INPUT
+        $('#tableBody').append(`
+        
+            <tr>
+                <td>${$('#fName').val("")}</td>
+                <td>${$('#lName').val("")}</td>
+                <td>${$('#idNumber').val("")}</td>
+                <td>${$('#title').val("")}</td>
+                <td>${$('#salary').val("")}</td>
+            <td>
+                <button>Delete</button>
+            </td>
+            </tr>
+    `);
+
 }
