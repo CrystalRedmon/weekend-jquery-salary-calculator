@@ -39,24 +39,30 @@ function onAddEmployee(evt){
     //////  ADD NEW EMPLOYEE TO EMPLOYEES ARRAY
     employees.push(newEmployee);
 
-    console.log(employees);
-    
-
 
     /////   CALL RENDER FUNCTION 
         toRender();
 };
 
 
+////////FUNCTION TO APPEND EMPLOYEE INFO TO DOM
+function toRender(){
 
+    for(let employee of employees){
 
-
-
-
-
-
-
-
-
-
-
+        console.log(employees.firstName);
+        $('#tableBody').append(`
+        
+        <tr>
+            <td>${employee.firstName}</td>
+            <td>${employee.lastName}</td>
+            <td>${employee.idNumber}</td>
+            <td>${employee.title}</td>
+            <td>${employee.annualSalary}</td>
+            <td>
+                <button>Delete</button>
+            </td>
+        </tr>
+        `);
+    }
+}

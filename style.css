@@ -49,22 +49,28 @@ input{
     
 }
 
+
+
 button{
     background-color: gray;
-    color: white;
-    margin-top: 15px;
     height: 2em;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+div button {
+    margin-top: 15px;
     width: 10em;
     float: right; 
-    display: inline;
-    border-radius: 5px;
-    font-size: 1em;
+    /* display: inline;  It doesn't seem to be moving the button*/  
+}   
 
   
+
+
     /*Float move the button to the right but the table moves up.  */
 
 
-}
 
 /* I originally tried to select the button by using the id but was unable to do so. Unsure why.  */
 
@@ -81,7 +87,7 @@ thead{
 }
 
 
-table, th, tr{
+table, th, tr, td{
     border: 1px solid;
     border-collapse: collapse;
     text-align: left;
@@ -99,4 +105,10 @@ tfoot {
     margin-top: 1em;
     float: right;
     font-size: 1.5em;
+  }
+
+  td button{
+    background-color: orange;
+    width: 7em;
+    margin-left: 20%
   }
