@@ -42,11 +42,14 @@ function onAddEmployee(evt){
 
     /////   CALL RENDER FUNCTION 
         toRender();
+
+    ////    
 };
 
 
 ////////FUNCTION TO APPEND EMPLOYEE INFO TO DOM
 function toRender(){
+    $('#tableBody').empty();
 
     for(let employee of employees){
 
