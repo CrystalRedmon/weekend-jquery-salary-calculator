@@ -2,12 +2,13 @@ console.log('Ready to Roll');
 
 $(document).ready(onReady);
 
-////      STATE     ///////  Initiate global variables here
+/////////  Initiate global variables here            ------STATE
 let employees = [];
+let monthlyExpenses = 0;
 
 
 
-////      EVENTS    ///////  All of the events belong in onReady function
+////      All of the events belong in onReady function------EVENTS
 function onReady(){
 //click works property but I thought we had to use submit for the form. Is there a specific place the button should be? does button need a for attribute? 
     $('button').on('click', onAddEmployee);
@@ -21,11 +22,9 @@ function onReady(){
 /////      UPDATE STATE FUNCTIONS    ////////////
 
 
-////       FUNCTION TO GET EMPLOYEE INFO AND ADD TO employees ARRAY
+////       GET EMPLOYEE INFO AND PUSH TO employees ARRAY----UPDATE STATE
 function onAddEmployee(evt){
     evt.preventDefault();
-
-    console.log('in onAddEmployee');
 
     ///// CREATE AN OBJECT THAT WILL GET INFO FROM ALL INPUT FIELDS ////
     let newEmployee = {
@@ -49,7 +48,13 @@ function onAddEmployee(evt){
     ////    
 };
 
-//////      RENDER FUNCTIONS         ///////////
+/////      DELETE EMPLOYEE FROM THE DOM        --------UPDATE STATE
+function onDeleteEmployee(){
+    $(this).parent().parent().remove();
+};
+
+
+//////      RENDER STATE        ///////////
 ////////FUNCTION TO APPEND EMPLOYEE INFO TO DOM
 function toRender(){
 
@@ -90,12 +95,27 @@ function toRender(){
                 </td>
             </tr>
     `);
-console.log(employees)
+
+    toCalulateExpenses();
 }
 
 
-function onDeleteEmployee(){
-    console.log('we in here');
-    $(this).parent().parent().remove();
 
-};
+function toCalulateExpenses(){
+    console.log('yup yup');
+
+    ///iterate employees array
+    for(let employee of employees){
+        console.log(employee.annualSalary);
+        monthlyExpenses += employee.annualSalary; 
+        
+    }
+        
+    $('#monthlyExpenses').text(`$ ${monthlyExpenses}`)
+    console.log(Number(monthlyExpenses));
+    ///add every annualSalary to monthly expenses
+
+
+
+
+}
