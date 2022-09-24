@@ -30,12 +30,15 @@ form{
     display: flex;
 }
 
+fieldset{
+    width: 100%;
+}
 
 input{
     color: gray;
     height: 1.5em;
     font-size: 1em;
-    margin-left:auto;  
+    /* margin-left:auto;   */
      /*first input should begin at the same spot as h2 heading. look up flex/flexbox*/
     
 }
@@ -55,12 +58,27 @@ button{
 /* I originally tried to select the button by using the id but was unable to do so. Unsure why.  */
 
 
+table{
+    width: 100%;
+    table-layout: fixed; /* TODO decide if I should change to auto or leave fixed based on how employee data appears when appended*/
+    
+}
+
+thead{
+    background-color: darkgray;
+}
 
 
 table, th, tr{
     border: 1px solid;
     border-collapse: collapse;
+    text-align: left;
+    padding: .5em;
   }
 
 
+tfoot {
+    height: 2em;
+    background-color: lightgray;
+}
   /* TODO- make sure table and button size matches the input size */
