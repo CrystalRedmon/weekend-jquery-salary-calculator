@@ -4,7 +4,7 @@ $(document).ready(onReady);
 
 /////////  Initiate global variables here            ------STATE
 let employees = [];
-let monthlyExpenses = 0;
+
 
 
 
@@ -74,7 +74,7 @@ function toRender(){
         </tr>
         `);
     };
-    
+
         
         $('input').empty();
         $('#inputForm input[type="text"]').val('')
@@ -101,17 +101,18 @@ function toRender(){
 
 
 function toCalulateExpenses(){
-
+    let monthlyExpenses = 0;
     ///iterate employees array
     for(let employee of employees){
-        monthlyExpenses = monthlyExpenses + Number(employee.annualSalary);    
-    }
+
+        ///add annualSalary from each employee to monthlyExpenses
+        monthlyExpenses += Number(employee.annualSalary); 
+    };
+    if(monthlyExpenses>20000){
         
-    $('#monthlyExpenses').text(`$ ${Number(monthlyExpenses)}`)
+    }
 
-    console.log(Number(monthlyExpenses));
-    ///add every annualSalary to monthly expenses
-
+    $('#monthlyExpenses').text(`$ ${monthlyExpenses}`)
 
 
 
