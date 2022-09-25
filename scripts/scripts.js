@@ -35,9 +35,6 @@ function onAddEmployee(evt){
         annualSalary: $('#salary').val()
     };
 
-
-
-
     //////  ADD NEW EMPLOYEE TO EMPLOYEES ARRAY
     employees.push(newEmployee);
 
@@ -61,7 +58,7 @@ function toRender(){
     ///CLEARS THE TABLE
     $('#tableBody').empty();
 
-    ///FOR EACH EMPLOYY IN EMPLOYEES ARRAY APPEND TR/TD/BUTTON
+    ///FOR EACH EMPLOYEE IN EMPLOYEES ARRAY APPEND TR/TD/BUTTON
     for(let employee of employees){
         $('#tableBody').append(`
         
@@ -70,31 +67,33 @@ function toRender(){
             <td>${employee.lastName}</td>
             <td>${employee.idNumber}</td>
             <td>${employee.title}</td>
-            <td>${employee.annualSalary}</td>
+            <td>$${employee.annualSalary}</td>
             <td>
                 <button class='deleteBtn' >Delete</button>
             </td>
         </tr>
         `);
     };
-
-    console.log($('#tableBody'))
-
-
-        ///////EMPTY FIELDS AFTER INPUT
-        $('#tableBody').append(`
+    
         
-            <tr>
-                <td>${$('#fName').val("")}</td>
-                <td>${$('#lName').val("")}</td>
-                <td>${$('#idNumber').val("")}</td>
-                <td>${$('#title').val("")}</td>
-                <td>${$('#salary').val("")}</td>  
-                <td>
-                    <button class='deleteBtn' >Delete</button>
-                </td>
-            </tr>
-    `);
+        $('input').empty();
+        $('#inputForm input[type="text"]').val('')
+
+
+        ///EMPTY FIELDS AFTER INPUT  //////UNSURE IF I'LL STILL NEED THIS
+        ////would using <input> work
+        // $('#tableBody').append(`
+        //     <tr>
+        //         <td>${$('#fName').val("")}</td>
+        //         <td>${$('#lName').val("")}</td>
+        //         <td>${$('#idNumber').val("")}</td>
+        //         <td>${$('#title').val("")}</td>
+        //         <td>${$('#salary').val("")}</td>  
+        //         <td>
+        //             <button class='deleteBtn' >Delete</button>
+        //         </td>
+        //     </tr>
+    // `);
 
     toCalulateExpenses();
 }
