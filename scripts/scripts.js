@@ -101,13 +101,17 @@ function toRender(){
 
 
 function toCalulateExpenses(){
-    let monthlyExpenses = 0;
+    let annualSalary = 0;
+    let monthlyExpenses= 0;
     ///iterate employees array
     for(let employee of employees){
 
         ///add annualSalary from each employee to monthlyExpenses
-        monthlyExpenses += Number(employee.annualSalary); 
+        annualSalary += Number(employee.annualSalary);
+
     };
+    monthlyExpenses = parseInt(annualSalary/12);
+
     $('#monthlyExpenses').text(`$ ${monthlyExpenses}`);
 
     if(monthlyExpenses>20000){

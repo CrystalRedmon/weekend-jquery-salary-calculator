@@ -9,7 +9,8 @@ body{
 }
 
 main{
-    margin: 1em;
+    width: 75%;
+    margin: auto;
 }
 
 h1{
@@ -44,11 +45,11 @@ fieldset{
 
 input{
     color: gray;
-    width:  10em;
+    width:  5em;
     height: 2em;
     font-size: 1em;
-    margin-right: 2em;
-    padding: 3px;
+    
+    
     
     /* margin-left:auto;   */
      /*first input should begin at the same spot as h2 heading. look up flex/flexbox*/
