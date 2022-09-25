@@ -19,7 +19,7 @@ function onReady(){
 
 }
 
-/////      UPDATE STATE FUNCTIONS    ////////////
+////////      UPDATE STATE FUNCTIONS    ////////////
 
 
 ////       GET EMPLOYEE INFO AND PUSH TO employees ARRAY----UPDATE STATE
@@ -57,6 +57,10 @@ function toRender(){
 
     ///CLEARS THE TABLE
     $('#tableBody').empty();
+
+    // // if($('#fName')=== "" || $('#lName')=== "" || $('#idNumber')=== "" || $('#title') === "" || $('#salary')===""){
+
+    // }
 
     ///FOR EACH EMPLOYEE IN EMPLOYEES ARRAY APPEND TR/TD/BUTTON
     for(let employee of employees){
