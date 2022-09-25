@@ -96,7 +96,7 @@ function toRender(){
     // `);
 
     toCalulateExpenses();
-}
+};
 
 
 
@@ -108,12 +108,11 @@ function toCalulateExpenses(){
         ///add annualSalary from each employee to monthlyExpenses
         monthlyExpenses += Number(employee.annualSalary); 
     };
+    $('#monthlyExpenses').text(`$ ${monthlyExpenses}`);
+
     if(monthlyExpenses>20000){
-        
-    }
-
-    $('#monthlyExpenses').text(`$ ${monthlyExpenses}`)
-
-
+        $('span').css('background', 'red');
+};
 
 }
+

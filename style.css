@@ -113,3 +113,12 @@ tfoot {
     width: 7em;
     margin-left: 20%
   }
+
+
+  .redBG{
+    background-color: red;
+  }
+
+  .white{
+    background-color: white;
+  }
